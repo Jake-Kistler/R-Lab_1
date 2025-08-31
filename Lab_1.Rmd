@@ -32,6 +32,18 @@ data <- read.csv("DDT-1.csv")
 head(data,6)
 ````
 
+## Task 3
+Subsetting Data:
+
+Quanitiative  values: Mile, Length, Weight and DDT.
+
+Qualititative values: River and Species.
+
+Number of species in data set:
+````{r}
+length(unique(data$SPECIES))
+````
+
 
 ## Including Plots
 
