@@ -21,9 +21,17 @@ Get the working directory
 getwd()
 ````
 
-```{r cars}
-summary(cars)
-```
+## Task 2
+Get the first 6 rows of data out of DDT.csv
+
+````{r}
+# Read in csv data into data
+data <- read.csv("DDT-1.csv")
+
+# display the first 6 rows of this data
+head(data,6)
+````
+
 
 ## Including Plots
 

@@ -1493,14 +1493,22 @@ border-radius: 0px;
 <p>Get the working directory</p>
 <pre class="r"><code>getwd()</code></pre>
 <pre><code>## [1] &quot;C:/R_packages/Labs/Lab_1&quot;</code></pre>
-<pre class="r"><code>summary(cars)</code></pre>
-<pre><code>##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00</code></pre>
+</div>
+<div id="task-2" class="section level2">
+<h2>Task 2</h2>
+<p>Get the first 6 rows of data out of DDT.csv</p>
+<pre class="r"><code># Read in csv data into data
+data &lt;- read.csv(&quot;DDT-1.csv&quot;)
+
+# display the first 6 rows of this data
+head(data,6)</code></pre>
+<pre><code>##   RIVER MILE  SPECIES LENGTH WEIGHT DDT
+## 1   FCM    5 CCATFISH   42.5    732  10
+## 2   FCM    5 CCATFISH   44.0    795  16
+## 3   FCM    5 CCATFISH   41.5    547  23
+## 4   FCM    5 CCATFISH   39.0    465  21
+## 5   FCM    5 CCATFISH   50.5   1252  50
+## 6   FCM    5 CCATFISH   52.0   1255 150</code></pre>
 </div>
 <div id="including-plots" class="section level2">
 <h2>Including Plots</h2>
