@@ -102,7 +102,7 @@ river_table
 
 A colored barplot of rivers:
 ````{r}
-barplot(river_table, col = "brown")
+barplot(river_table, col = c("red", "blue", "green", "yellow"))
 ````
 
 Make a table of river and fish species:
@@ -119,7 +119,7 @@ crossed_table_river_fish <- table(data$RIVER, data$SPECIES)
 # make a barplot
 barplot(crossed_table_river_fish,
         beside = TRUE,      # put species side-by-side for each river
-        col = "brown",
+        col = rainbow(4),
         legend = TRUE,      # add legend for fish species
         xlab = "River",
         ylab = "Count",
@@ -129,7 +129,11 @@ barplot(crossed_table_river_fish,
 ## Task 6
 Make a pie chart of fish species:
 ````{r}
+# make the table
+species_pie_table <- table(data$SPECIES)
 
+# Display the pie chart
+pie(species_pie_table,col = rainbow(3))
 ````
 
 

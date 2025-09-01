@@ -77,5 +77,9 @@ barplot(crossed_table_river_fish,
 
 # Task 6 Pie chart time!
 
+# make the table
+species_pie_table <- table(data$SPECIES)
+
+pie(species_pie_table,col = rainbow(3))
 
 
