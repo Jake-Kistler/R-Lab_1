@@ -48,6 +48,13 @@ with(data, plot(LENGTH ~ WEIGHT, bg = "Orange", pch = 21, cex = 1))
 # a math question now
 # if v = 1:20 what is the last value of v/20?
 
-# What is this?
+# A vector 1 - 20 then divide every element by 20
 v = 1:20
 v / 20
+
+# task 5: Table time
+river_table = with(data,table(data$RIVER))
+river_table
+
+# Now to make the bar plot
+barplot(river_table, col = "brown")

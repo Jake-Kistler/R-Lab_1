@@ -76,9 +76,6 @@ The standard deviation of the weight of the data set:
 sd(data$WEIGHT)
 ````
 
-
-## Task 5
-
 From the given picture we can recreate both potinal plots (WEIGHT vs LENGTH or LENGTH vs WEIGHT) to answer the question.
 ````{r}
 # plot and display both graphs 
@@ -89,17 +86,24 @@ so given this information, the provided plot is the LENGTH vs WEIGHT or the firs
 
 if v = 1:20 what is the last value of v/20?:
 ````{r}
+# Create a vector with values 1 - 20 stored in it
 v = 1:20
-v
+# divide each index by 20
+v / 20
+# The last value is 1.00 since it would be 20/20
 ````
 
+## Task 5
+Make a table of the rivers:
+````{r}
+river_table = with(data,table(data$RIVER))
+river_table
+````
 
-## Including Plots
+A colored barplot of rivers:
+````{r}
+barplot(river_table, col = "brown")
+````
 
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
