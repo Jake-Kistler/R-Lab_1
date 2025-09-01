@@ -56,6 +56,20 @@ ddt_and_SMC_river <- data[data$RIVER == "SCM" & data$DDT > 4.0, ]
 ddt_and_SMC_river
 ````
 
+## Task 4
+
+The mean (average) length of the fish in this data set
+```{r}
+mean(data$LENGTH)
+```
+
+The standard deviation of the weight of the data set:
+````{r}
+sd(data$WEIGHT)
+````
+
+
+
 
 ## Including Plots
 

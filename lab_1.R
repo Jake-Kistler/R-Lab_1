@@ -23,3 +23,17 @@ large_mouth_base_subset
 # Now to slice up the data by river and DDT amounts
 ddt_and_SMC_river <- data[data$RIVER == "SCM" & data$DDT > 4.0, ]
 ddt_and_SMC_river
+
+# Task 4:
+# Time to do some math... rock and roll?? (oh nevermind we have functions it seems)
+
+# mean is the average
+mean(data$LENGTH) # Wild we can't store this value
+
+# mean_length <- mean(data$LENGTH)
+# mean_length does not compile which is odd
+
+# now to calc the standard div and off to the web for documentation!
+# Found some here for standard div: https://www.scaler.com/topics/built-in-functions-in-r/
+
+sd(data$WEIGHT)
