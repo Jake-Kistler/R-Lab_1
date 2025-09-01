@@ -15,3 +15,11 @@ head(data,6)
 
 # Number of species in the data set
 length(unique(data$SPECIES))
+
+# subset for large mouth bass with a weight > 800 mg
+large_mouth_base_subset <- data[data$SPECIES == "LMBASS" & data$WEIGHT > 800, ]
+large_mouth_base_subset
+
+# Now to slice up the data by river and DDT amounts
+ddt_and_SMC_river <- data[data$RIVER == "SCM" & data$DDT > 4.0, ]
+ddt_and_SMC_river

@@ -44,6 +44,18 @@ Number of species in data set:
 length(unique(data$SPECIES))
 ````
 
+Number of large mouth bass in sample with weights greater than 800 mg
+````{r}
+large_mouth_base_subset <- data[data$SPECIES == "LMBASS" & data$WEIGHT > 800, ]
+large_mouth_base_subset
+````
+
+Number of fish present in sample that came from the SMC river and had DDT values greater that 4.0
+````{r}
+ddt_and_SMC_river <- data[data$RIVER == "SCM" & data$DDT > 4.0, ]
+ddt_and_SMC_river
+````
+
 
 ## Including Plots
 
