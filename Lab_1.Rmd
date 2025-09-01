@@ -18,6 +18,7 @@ knitr::opts_chunk$set(echo = TRUE)
 Get the working directory 
 
 ````{r}
+# Return the wokring dir 
 getwd()
 ````
 
@@ -41,34 +42,56 @@ Qualititative values: River and Species.
 
 Number of species in data set:
 ````{r}
+# Return the number of 
 length(unique(data$SPECIES))
 ````
 
-Number of large mouth bass in sample with weights greater than 800 mg
+Number of large mouth bass in sample with weights greater than 800 mg:
 ````{r}
+# Extract data that has species as large maouth bass and weight greater than 800 mg
 large_mouth_base_subset <- data[data$SPECIES == "LMBASS" & data$WEIGHT > 800, ]
+# Display the data 
 large_mouth_base_subset
 ````
 
-Number of fish present in sample that came from the SMC river and had DDT values greater that 4.0
+Number of fish present in sample that came from the SMC river and had DDT values greater that 4.0:
 ````{r}
+# Extract the data that has river of SCM and DDT values greater than 4.0
 ddt_and_SMC_river <- data[data$RIVER == "SCM" & data$DDT > 4.0, ]
+# Display the data
 ddt_and_SMC_river
 ````
 
 ## Task 4
 
-The mean (average) length of the fish in this data set
+The mean (average) length of the fish in this data set:
 ```{r}
+# Calculate and display the mean length of the fish in the data set
 mean(data$LENGTH)
 ```
 
 The standard deviation of the weight of the data set:
 ````{r}
+# Calculate and display the standard div of the weight of the fish in the data set
 sd(data$WEIGHT)
 ````
 
 
+## Task 5
+
+From the given picture we can recreate both potinal plots (WEIGHT vs LENGTH or LENGTH vs WEIGHT) to answer the question.
+````{r}
+# plot and display both graphs 
+with(data, plot(WEIGHT ~ LENGTH, bg = "Orange", pch = 21, cex = 1))
+with(data, plot(LENGTH ~ WEIGHT, bg = "Orange", pch = 21, cex = 1))
+````
+so given this information, the provided plot is the LENGTH vs WEIGHT or the first plot.
+
+if v = 1:20 what is the last value of v/20?:
+````{r}
+v = 1:20
+v
+````
 
 
 ## Including Plots

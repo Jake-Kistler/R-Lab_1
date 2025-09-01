@@ -37,3 +37,17 @@ mean(data$LENGTH) # Wild we can't store this value
 # Found some here for standard div: https://www.scaler.com/topics/built-in-functions-in-r/
 
 sd(data$WEIGHT)
+
+# Task 5:
+# time to start working with plots
+
+# Cook up both plots to compare
+with(data, plot(WEIGHT ~ LENGTH, bg = "Orange", pch = 21, cex = 1))
+with(data, plot(LENGTH ~ WEIGHT, bg = "Orange", pch = 21, cex = 1))
+
+# a math question now
+# if v = 1:20 what is the last value of v/20?
+
+# What is this?
+v = 1:20
+v / 20
