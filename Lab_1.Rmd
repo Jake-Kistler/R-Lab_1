@@ -136,5 +136,19 @@ species_pie_table <- table(data$SPECIES)
 pie(species_pie_table,col = rainbow(3))
 ````
 
+## Task 7
+Box Plots:
+
+````{r}
+# for DDT
+boxplot(data$DDT)
+
+# for weight
+boxplot(data$WEIGHT)
+
+# and for length
+boxplot(data$LENGTH)
+````
+
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

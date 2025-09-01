@@ -82,4 +82,15 @@ species_pie_table <- table(data$SPECIES)
 
 pie(species_pie_table,col = rainbow(3))
 
+# Task 7: box plots
+
+# for DDT
+boxplot(data$DDT)
+
+# for weight
+boxplot(data$WEIGHT)
+
+# and for length
+boxplot(data$LENGTH)
+
 
