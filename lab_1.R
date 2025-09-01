@@ -58,3 +58,24 @@ river_table
 
 # Now to make the bar plot
 barplot(river_table, col = "brown")
+
+# Now to make a crossed table with rivers and fish
+crossed_table_river_fish = with(data, table(data$RIVER, data$SPECIES))
+crossed_table_river_fish
+
+# create a cross table of river and fish species
+crossed_table_river_fish <- table(data$RIVER, data$SPECIES)
+
+# make a barplot
+barplot(crossed_table_river_fish,
+        beside = TRUE,      # put species side-by-side for each river
+        col = "brown",
+        legend = TRUE,      # add legend for fish species
+        xlab = "River",
+        ylab = "Count",
+        main = "Fish species across rivers")
+
+# Task 6 Pie chart time!
+
+
+

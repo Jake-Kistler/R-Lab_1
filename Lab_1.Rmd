@@ -105,5 +105,32 @@ A colored barplot of rivers:
 barplot(river_table, col = "brown")
 ````
 
+Make a table of river and fish species:
+````{r}
+crossed_table_river_fish = with(data, table(data$RIVER, data$SPECIES))
+crossed_table_river_fish
+````
+
+Make a barplot of rivers cross with fish species
+````{r}
+# create a cross table of river and fish species
+crossed_table_river_fish <- table(data$RIVER, data$SPECIES)
+
+# make a barplot
+barplot(crossed_table_river_fish,
+        beside = TRUE,      # put species side-by-side for each river
+        col = "brown",
+        legend = TRUE,      # add legend for fish species
+        xlab = "River",
+        ylab = "Count",
+        main = "Fish species across rivers")
+````
+
+## Task 6
+Make a pie chart of fish species:
+````{r}
+
+````
+
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
