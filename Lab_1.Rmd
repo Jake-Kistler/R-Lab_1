@@ -150,5 +150,29 @@ boxplot(data$WEIGHT)
 boxplot(data$LENGTH)
 ````
 
+## Task 8 
+Co plots:
+````{r}
+# this first section assigns colors based on species
+length_v_weight_coplot = with(data, ifelse(data$SPECIES == "CCATFISH", "red",
+                                    ifelse(data$SPECIES == "SMBUFFALO", "green", "blue")))
+
+# plot length on the y axis and weight on the x with sections made for each river
+coplot(LENGTH ~ WEIGHT | RIVER, data=data, col=length_v_weight_coplot)
+````
+
+Now to coplot with respect to species
+````{r}
+# Now to plot DDT vs Weight given the species
+coplot(DDT ~ WEIGHT| SPECIES, data=data, col=length_v_weight_coplot)
+````
+
+## Task 9:
+Plotting with GG plot
+````{r}
+
+````
+
+
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

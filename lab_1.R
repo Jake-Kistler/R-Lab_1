@@ -93,4 +93,27 @@ boxplot(data$WEIGHT)
 # and for length
 boxplot(data$LENGTH)
 
+# Task 8 Coplots:
+
+# Length v weight given river
+length_v_weight_coplot = with(data, ifelse(data$SPECIES == "CCATFISH", "red",
+                                    ifelse(data$SPECIES == "SMBUFFALO", "green", "blue")))
+
+coplot(LENGTH ~ WEIGHT | RIVER, data=data, col=length_v_weight_coplot)
+
+# Now to plot DDT vs Weight given the species
+coplot(DDT ~ WEIGHT| SPECIES, data=data, col=length_v_weight_coplot)
+
+
+# having some naming issues so time for a new data frame
+dataF <- read.csv("DDT-1.csv")
+
+# Task 9 ggplotting
+library(ggplot2)
+gg_plot_boxplot <- ggplot(dataF, aes(x = SPECIES, y = WEIGHT, fill = RIVER)) + geom_boxplot()
+le("Jake Austin Kistler")
+
+gg_plot_boxplot
+
+
 
